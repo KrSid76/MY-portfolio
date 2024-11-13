@@ -1,0 +1,212 @@
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: linear-gradient(135deg, #dee2e6,  #e9ecef,#f8f9fa,#ffffff) ;
+$accent-color: #132a13;
+$text-color: #ffffff;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: $background-color;  // Application du dégradé directement sur le body
+  color: $primary-color;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar {
+  background-color: $primary-color;
+
+  .navbar-brand,
+  .nav-link {
+    color: $text-color;
+
+    &:hover {
+      color: lighten($accent-color, 30%);
+    }
+  }
+}
+
+.hero-section {
+  padding: 5rem 0;
+  background-color: $primary-color;
+  color: $text-color;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    background-color: $accent-color;
+    color: $text-color;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: lighten($accent-color, 20%);
+    }
+  }
+}
+
+.about-preview {
+  .hero-image {
+    width: 60%;               // Rend l'image responsive
+    max-width: 800px;          // Limite la largeur à 800px
+    height: auto;              // Maintient les proportions
+    border: 3px solid #333;
+    border-radius: 10px;
+    transform: translateX(35%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+
+  // Responsive layout pour les petits écrans
+  @media (max-width: 576px) {
+    .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1rem; // espace entre texte et image sur les petits écrans
+    }
+
+    // Centrage du bouton sur les petits écrans
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.main-content {
+  padding: 3rem 0;
+  background-color: $background-color;
+
+  h2 {
+    color: $primary-color;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1rem;
+  }
+}
+
+.card {
+  border: none;
+  background-color: $background-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    text-align: center;
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: $secondary-color;
+    }
+
+    .btn {
+      background-color: $accent-color;
+      color: $text-color;
+
+      &:hover {
+        background-color: lighten($accent-color, 30%);
+      }
+    }
+  }
+}
+
+.about-me {
+  .container {
+    max-width: 960px;
+  }
+
+  h2 {
+    color: $primary-color;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border: 3px solid $accent-color;
+    padding: 0.3rem;
+    width: 100%;
+  }
+}
+
+form {
+  .form-label {
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .form-control {
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    padding: 0.75rem;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: lighten($primary-color, 20%);
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 1rem;
+  text-align: center;
+}
